@@ -10,10 +10,10 @@ def printGameBoard():
             print("\n" + "-" * 13)
     print()
 def checkForWinner():
-    for row in gameBoard:  # Check rows
+    for row in gameBoard:  
         if row[0] == row[1] == row[2] and row[0] != " ":
             return row[0]
-    for col in range(3):  # Check columns
+    for col in range(3): 
         if gameBoard[0][col] == gameBoard[1][col] == gameBoard[2][col] and gameBoard[0][col] != " ":
             return gameBoard[0][col]
     if gameBoard[0][0] == gameBoard[1][1] == gameBoard[2][2] and gameBoard[0][0] != " ":
@@ -34,10 +34,10 @@ def minimax(is_maximizing):
     best_score = -math.inf if is_maximizing else math.inf
     for x in range(3):
         for y in range(3):
-            if gameBoard[x][y] == " ":  # Empty cell
+            if gameBoard[x][y] == " ": 
                 gameBoard[x][y] = "O" if is_maximizing else "X"
                 score = minimax(not is_maximizing)
-                gameBoard[x][y] = " "  # Reset cell
+                gameBoard[x][y] = " " 
                 best_score = max(best_score, score) if is_maximizing else min(best_score, score)
     return best_score
 def bestMove():
@@ -45,10 +45,10 @@ def bestMove():
     move = None
     for x in range(3):
         for y in range(3):
-            if gameBoard[x][y] == " ":  # Empty cell
+            if gameBoard[x][y] == " ":  
                 gameBoard[x][y] = "O"
                 score = minimax(False)
-                gameBoard[x][y] = " "  # Reset cell
+                gameBoard[x][y] = " " 
                 if score > best_score:
                     best_score = score
                     move = (x, y)
@@ -63,7 +63,7 @@ while True:
         else:
             print(f"\n{winner} has won!")
         break
-    if turnCounter % 2 == 0:  # Player's turn
+    if turnCounter % 2 == 0: 
         while True:
             try:
                 row_col = input("\nEnter row and column (e.g., 1 2): ")
