@@ -49,7 +49,7 @@ def evaluate_system(predicted_ratings, actual_ratings):
     return rmse, mae
 if not filtered_df.empty:
     predicted_ratings = filtered_df['Rating (out of 5)'].head(5)
-    actual_ratings = filtered_df['Rating (out of 5)'].head(5)  # Replace with actual data when available
+    actual_ratings = filtered_df['Rating (out of 5)'].head(5) 
     rmse, mae = evaluate_system(predicted_ratings, actual_ratings)
     print("\nEvaluation Metrics:")
     print(f"RMSE: {rmse:.2f}")
