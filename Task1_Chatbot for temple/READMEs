@@ -1,0 +1,17 @@
+Chatbot that can answer common queries about a temple, such as timings, pooja schedules, and footwear storage.
+
+Approach:
+ Rule-Based System where predefined rules match user queries to appropriate responses.
+User input is converted to lowercase and extra spaces are removed for efficient keyword matching.
+If the input contains keywords like "timing," "pooja," or "footwear," the bot provides specific responses.
+For unrecognized queries, a polite fallback response is triggered.
+A loop ensures multiple interactions, ending only when the user inputs "exit" or "quit."
+
+Tools:
+Python Standard Library
+input() (for user input)
+String methods: lower(), strip()
+
+How to Use:
+bot will prompt you to ask a question,Type your query  "What time is the evening pooja?",The bot will respond based on the keywords or type "exit" to end the conversation.
+
