@@ -1,0 +1,17 @@
+Problem Statement
+ Tic-Tac-Toe against a human player. The AI uses algorithms such as Minimax with or without Alpha-Beta Pruning to ensure it is unbeatable. 
+
+Approach Taken:
+The game board is a 3x3 grid implemented as a 2D list.Player ('X') and AI ('O') take alternate turns.
+The AI evaluates all possible moves to maximize its chance of winning and minimize the player's winning chances. The AI considers all future moves and ensures no winning opportunity is left for the player.
+The player enters a row and column in a single line, like 1 2 (row 1, column 2). Input is validated to avoid errors.
+The game ends when either player wins or the board is full draw
+
+Tools/Libraries Used
+Python 3.x
+Math Library
+
+How to Run the Code
+Install Python 3.x 
+Copy the code into  tictactoe.py
+Run python tictactoe.py
